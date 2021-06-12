@@ -1,0 +1,171 @@
+body {
+    margin: 10% auto;
+}
+
+.main-container {
+    margin: auto;
+    position: relative;
+    width: 250px;
+    height: 250px;
+    /* Debugging positions */
+    /* border: 3px solid red; */
+}
+
+
+.center, .orbit1, .orbit2,
+.orbit3, .orbit4, .orbit5, .orbit6,
+.orbit7, .orbit8, .orbit {
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+}
+
+/* .center {
+    position: absolute;
+    top: 150px;
+    left: 265px;
+} */
+
+.orbit1 {
+    -webkit-animation: firstOrbit 8s linear infinite;
+    -moz-animation: firstOrbit 8s linear infinite;
+    -o-animation: firstOrbit 8s linear infinite;
+    animation: firstOrbit 8s linear infinite;
+}
+
+.orbit8 {
+    -webkit-animation: firstOrbit 8s linear infinite, fade 30s infinite;
+    -moz-animation: firstOrbit 8s linear infinite, fade 30s infinite;
+    -o-animation: firstOrbit 8s linear infinite, fade 30s infinite;
+    animation: firstOrbit 8s linear infinite, fade 30s infinite;
+}
+
+
+.orbit2 {
+    -webkit-animation: secondOrbit 8s linear infinite;
+    -moz-animation: secondOrbit 8s linear infinite;
+    -o-animation: secondOrbit 8s linear infinite;
+    animation: secondOrbit 8s linear infinite;
+}
+
+.orbit3 {
+    -webkit-animation: thirdOrbit 8s linear infinite;
+    -moz-animation: thirdOrbit 8s linear infinite;
+    -o-animation: thirdOrbit 8s linear infinite;
+    animation: thirdOrbit 8s linear infinite;
+}
+
+.orbit7 {
+    -webkit-animation: thirdOrbit 8s linear infinite, fade 30s infinite;
+    -moz-animation: thirdOrbit 8s linear infinite, fade 30s infinite;
+    -o-animation: thirdOrbit 8s linear infinite, fade 30s infinite;
+    animation: thirdOrbit 8s linear infinite, fade 30s infinite;
+}
+
+.orbit4 {
+    -webkit-animation: fourthOrbit 8s linear infinite;
+    -moz-animation: fourthOrbit 8s linear infinite;
+    -o-animation: fourthOrbit 8s linear infinite;
+    animation: fourthOrbit 8s linear infinite;
+}
+
+.orbit5 {
+    -webkit-animation: fifthOrbit 8s linear infinite;
+    -moz-animation: fifthOrbit 8s linear infinite;
+    -o-animation: fifthOrbit 8s linear infinite;
+    animation: fifthOrbit 8s linear infinite;
+}
+
+.orbit6 {
+    -webkit-animation: fifthOrbit 8s linear infinite, fade 30s infinite;
+    -moz-animation: fifthOrbit 8s linear infinite, fade 30s infinite;
+    -o-animation: fifthOrbit 8s linear infinite, fade 30s infinite;
+    animation: fifthOrbit 8s linear infinite, fade 30s infinite;
+}
+
+
+
+
+.loader1, .loader2, .loader3  {
+    border: 5px dashed;
+    border-radius: 50%;
+    border-color: black;
+    position: absolute;
+    -webkit-animation: spin 8s linear infinite;
+    -moz-animation: spin 8s linear infinite;
+    -o-animation: spin 8s linear infinite;
+    animation: spin 8s linear infinite;
+    margin: 0 auto;
+}
+
+.loader1 {
+    width: 60%;
+    height: 60%;
+    top: 18%;
+    left: 18%;
+}
+
+.loader2 {
+    width: 100%;
+    height: 100%;
+    top: -2%;
+    left: -2%;
+}
+
+.loader3 {
+    width: 140%;
+    height: 140%;
+    top: -22%;
+    left: -22%;
+}
+
+
+@keyframes firstOrbit {
+    from { transform: rotate(0deg) translateX(150%) rotate(0deg);}
+    to { transform: rotate(360deg) translateX(150%) rotate(-360deg);}    
+}
+
+@keyframes secondOrbit {
+    from { transform: rotate(30deg) translateX(260%) rotate(-30deg);}
+    to { transform: rotate(390deg) translateX(260%) rotate(-390deg);}    
+}
+
+@keyframes thirdOrbit {
+    from { transform: rotate(60deg) translateX(350%) rotate(-60deg);}
+    to { transform: rotate(420deg) translateX(350%) rotate(-420deg);}    
+}
+
+@keyframes fourthOrbit {
+    from { transform: rotate(120deg) translateX(260%) rotate(-120deg);}
+    to { transform: rotate(480deg) translateX(260%) rotate(-480deg);}    
+}
+
+@keyframes fifthOrbit {
+    from { transform: rotate(180deg) translateX(350%) rotate(-180deg);}
+    to { transform: rotate(540deg) translateX(350%) rotate(-540deg);}    
+}
+
+@keyframes spin {
+    100%{transform: rotate(360deg);}
+}
+
+@keyframes fade {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+    
+}
+
+/* @keyframes unfade {
+    0% {opacity: 1;}
+    25% {opacity: 0.5;}
+    50% {opacity: 0;}
+    75% {opacity: 0.5;}
+    100% {opacity: 1;}
+    
+} */
